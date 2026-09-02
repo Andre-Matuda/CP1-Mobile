@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'CP1 - Mobile',
       theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.white)),
-      home: const MyHomePage(title: ''),
+      home: const MyHomePage(title: 'CP1-Mobile'),
     );
   }
 }
@@ -32,11 +32,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void decrement() {
     setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
       _counter--;
     });
   }
@@ -55,7 +50,10 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text("Controole de lotação", style: Google),
+        title: Text("Controole de lotação",
+          style: TextStyle(
+            color: Colors.white,
+          )),
       ),
 
       body: Container(
